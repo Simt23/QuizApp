@@ -1,17 +1,16 @@
-*{
-  margin:0;
-  padding:0;
+* {
+  margin: 0;
+  padding: 0;
   box-sizing: border-box;
 }
-body{
-   background: url("images/background.jpg");
-   background-repeat: no-repeat;
-   background-size: 100%;
+
+body {
+  background: url("images/background.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
   display: flex;
   align-items: center;
-  justify-content: center;    
-  /* background-image: linear-gradient(purple,rgb(238, 48, 238)); */
-
+  justify-content: center;
   min-height: 130vh;
   width: 100%;
 }
@@ -20,37 +19,36 @@ body{
   display: flex;
   align-items: center;
   flex-direction: column;
-  min-height:530px;
-  width: 400px;
+  min-height: 530px;
+  width: 90%;
+  max-width: 400px;
   background-color: black;
   border-color: black;
   border-radius: 15px;
   border-width: medium;
-  /* box-shadow: 2px 2px 10px 1px rgb(102, 3, 102); */
-  box-shadow: 2px 2px 10px 1px #66c5ee;  
+  box-shadow: 2px 2px 10px 1px #66c5ee;
   overflow: hidden;
   padding: 5px;
   position: relative;
   margin-bottom: 10px;
-  margin-top:0px;
+  margin-top: 0px;
 }
 
-.heading-txt{
-  color:white;
-  /* color:#276272; */
+.heading-txt {
+  color: white;
   font-size: 30px;
   font-weight: bold;
   margin: 5px;
   text-shadow: 1px 1px 3px red, 0 0 2em blue, 0 0 0.3em blue;
-  text-align: center;  
+  text-align: center;
   text-transform: uppercase;
-  
 }
-.question{
-  margin:50px;
+
+.question {
+  margin: 50px;
   box-shadow: 0px 0px 10px 1px #87efef;
   border-radius: 5px;
-  padding:20px;
+  padding: 20px;
   font-size: large;
   font-weight: 600;
   font-family: 'Times New Roman', Times, serif;
@@ -61,24 +59,24 @@ body{
   align-items: center;
   color: white;
 }
-#question-number{
+
+#question-number {
   margin-right: 8px;
 }
-.option-container{
+
+.option-container {
   display: flex;
   flex-direction: column;
-  margin:6px 4px;    
+  margin: 6px 4px;
   width: 100%;
   padding: 10px;
 }
-/* .option-container input{
-  visibility: hidden;    
-} */
-.option-btn{
+
+.option-btn {
   box-shadow: 0px 0px 4px 1px rgb(128, 123, 123);
-  padding:  5px;
+  padding: 5px;
   border-radius: 3px;
-  border:none;
+  border: none;
   outline: none;
   transition: 0.3s;
   margin: 8px;
@@ -86,44 +84,108 @@ body{
   background-color: white;
 }
 
-.checked{
+.checked {
   background-color: hwb(300 57% 41%);
-  color:white;
+  color: white;
   box-shadow: 3px 3px 4px 1px rgb(78, 69, 78);
-  
 }
-.option-btn:hover{
+
+.option-btn:hover {
   background-color: rgb(169, 160, 169);
-  color:white;
+  color: white;
 }
-#next-button{
-  padding:10px;
-  border:none;
-  background-color: rgb(58, 8, 58);
+
+#next-button {
+  padding: 10px;
+  border: none;
   background-color: #276272;
-  color:white;
+  color: white;
   border-radius: 5px;
   box-shadow: 3px 3px 2px 1px rgb(127, 109, 109);
   font-size: larger;
   font-weight: bold;
-  font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
   transition: 0.2s;
-  width:100px;
+  width: 100px;
   position: absolute;
   bottom: 40px;
 }
-#next-button:active{
-  box-shadow:none;    
+
+#next-button:active {
+  box-shadow: none;
 }
-.show-score{
+
+.show-score {
   position: absolute;
-  top:30%;
+  top: 30%;
   font-size: 40px;
-  text-align: center;  
+  text-align: center;
   color: white;
 }
-.Timer{
-  color:white;
-margin-right:20em;
-font-size: small;
+
+.Timer {
+  color: white;
+  margin-right: 20em;
+  font-size: small;
+}
+
+/* Media Queries */
+@media (max-width: 768px) {
+  .container {
+    width: 300px;
+    min-height: 400px;
+    justify-content: center;
+  }
+
+  .question {
+    margin: 30px;
+    padding: 15px;
+    font-size: medium;
+  }
+
+  .heading-txt {
+    font-size: 25px;
+  }
+
+  #next-button {
+    font-size: medium;
+    width: 90px;
+    bottom: 30px;
+  }
+
+  .show-score {
+    font-size: 30px;
+  }
+}
+
+@media (max-width: 480px) {
+  .container {
+    width: 100%;
+    min-height: 350px;
+  }
+
+  .question {
+    margin: 20px;
+    padding: 10px;
+    font-size: small;
+  }
+
+  .heading-txt {
+    font-size: 20px;
+  }
+
+  #next-button {
+    font-size: small;
+    width: 80px;
+    bottom: 20px;
+  }
+
+  .show-score {
+    font-size: 25px;
+  }
+
+  .Timer {
+    font-size: x-small;
+    margin-right: 10em;
+  }
 }
